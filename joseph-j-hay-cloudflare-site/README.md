@@ -1,48 +1,65 @@
-# Joseph J. Hay — Cloudflare Pages website
+# Joseph J. Hay - Author Portfolio
 
-A responsive, static HTML/CSS/JavaScript reconstruction based on the published website and supplied screenshot.
+[![Live Site](https://img.shields.io/badge/Live_Site-View_Now-blue?style=for-the-badge)](https://joseph-j-hay.pages.dev/)
+[![Cloudflare Pages](https://img.shields.io/badge/Hosted_on-Cloudflare_Pages-F38020?style=for-the-badge&logo=cloudflare)](https://pages.cloudflare.com/)
 
-## Files
+A professional, responsive portfolio and landing page for **Joseph J. Hay**, military veteran and author. This site serves as a central hub to showcase his book collection, share his unique perspective, and direct readers to his Amazon Author page.
 
-- `index.html` — page structure and copy
-- `styles.css` — responsive editorial styling
-- `script.js` — mobile navigation and copyright year
-- `assets/` — place the final book cover images here
+## 📖 Featured Books
 
-## Book cover assets
+This landing page highlights the following titles:
+1. **The True Middle:** Connections & Perspective
+2. **Emotional Equity:** Investment & Self-Reflection
+3. **The Space Between Us:** Individuality & Coexistence
 
-Add authorized cover artwork with these exact filenames:
+## ✨ Features
 
-- `assets/true-middle.jpg`
-- `assets/emotional-equity.jpg`
-- `assets/space-between-us.jpg`
+- **Clean, Modern UI:** A distraction-free design focused on typography and imagery.
+- **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewing.
+- **Amazon Integration:** Direct outbound links to Amazon product pages and the official Author page.
+- **Fast Performance:** Lightweight static assets served globally via Cloudflare's edge network.
 
-The original image assets were not available as downloadable source files in this reconstruction, so the cover locations are placeholders until you add the real artwork.
+## 🛠️ Tech Stack
 
-## Before launch
+- **Frontend:** Semantic HTML5, CSS3 
+- **Hosting & CI/CD:** [Cloudflare Pages](https://pages.cloudflare.com/)
 
-1. Replace each `#amazon-*` placeholder URL in `index.html` with the appropriate Amazon author/book URL.
-2. Confirm author biography and reader-review section content.
-3. Add a favicon and social-sharing image if desired.
-4. Test the site at mobile and desktop sizes.
+## 📂 Project Structure
 
-## Deploy to Cloudflare Pages
+```text
+joseph-j-hay-cloudflare-site/
+├── assets/             # Images, book covers, and fonts
+├── index.html          # Main landing page template
+├── styles.css          # Global styling (if separate from HTML)
+└── README.md           # Project documentation
+```
 
-### Direct upload
+## 🚀 Local Development
 
-1. Sign in to Cloudflare.
-2. Open **Workers & Pages** and create a Pages project.
-3. Choose **Direct Upload**.
-4. Upload the contents of this folder (the `index.html` file must be at the root).
-5. After the first deployment, open the project's **Custom domains** section and add your domain.
-6. Follow Cloudflare's DNS setup instructions. If the domain is already on Cloudflare DNS, the required records can generally be added there.
+To run this project locally, you don't need any complex build tools. You can use any local web server.
 
-### Git-based deployment (recommended for ongoing changes)
+### Option 1: VS Code (Recommended)
+1. Open the project folder in Visual Studio Code.
+2. Install the **Live Server** extension.
+3. Right-click on `index.html` and select **"Open with Live Server"**.
+4. The site will open in your default browser at `http://127.0.0.1:5500`.
 
-1. Commit this folder to a GitHub repository.
-2. In Cloudflare Pages, create a project connected to that repository.
-3. Set the build command to blank / none for a plain static site.
-4. Set the build output directory to the repository root (`/` or the project root, depending on the setup UI).
-5. Add your custom domain in the Pages project.
+### Option 2: Python HTTP Server
+If you have Python installed, open your terminal, navigate to this directory, and run:
+```bash
+# Python 3
+python -m http.server 8000
+```
+Then open `http://localhost:8000` in your browser.
 
-No server-side runtime, package manager, or build step is required.
+## ☁️ Deployment
+
+This project is configured for continuous deployment using **Cloudflare Pages**. 
+
+1. Any push to the `main` branch of this GitHub repository will automatically trigger a new build.
+2. Cloudflare fetches the latest code and deploys it to the live edge network in seconds.
+3. The live site can be accessed at: [https://joseph-j-hay.pages.dev/](https://joseph-j-hay.pages.dev/)
+
+## 🤝 Contact & Links
+
+- **Live Website:** [joseph-j-hay.pages.dev](https://joseph-j-hay.pages.dev/)
